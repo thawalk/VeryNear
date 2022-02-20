@@ -95,6 +95,10 @@
   display: none;
 }
 
+.active{
+  color: rgb(46, 251, 108);
+}
+
 @media screen and (max-width: 1050px) {
   .verynear__navbar-links_container {
     display: none;
