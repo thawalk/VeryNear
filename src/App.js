@@ -199,9 +199,7 @@
 
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
-// import  Home from './pages/home/Home';
-// import MintingNow from './pages/minting-now/MintingNow';
-import { Home, MintingNow, Upcoming } from './pages'
+import { Home, MintingNow, Upcoming, Past } from './pages'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
@@ -211,12 +209,14 @@ export default function App() {
     <div className='App'>
       <Router>
         <div className='gradient__bg'>
-          <Navbar />
+          <Navbar/>
         </div>
+          
         <Switch>
           <Route path="/" exact><Home/></Route>
           <Route path="/minting-now"><MintingNow/></Route>
           <Route path="/upcoming"><Upcoming/></Route>
+          <Route path="/past"><Past/></Route>
         </Switch>
       </Router>
     </div>
