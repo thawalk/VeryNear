@@ -200,6 +200,7 @@
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import  Home from './pages/home/Home';
+import MintingNow from './pages/minting-now/MintingNow';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
@@ -213,6 +214,7 @@ export default function App() {
         </div>
         <Switch>
           <Route path="/" exact><Home/></Route>
+          <Route path="/minting-now"><MintingNow/></Route>
         </Switch>
       </Router>
     </div>
