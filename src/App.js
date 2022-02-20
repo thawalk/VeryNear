@@ -210,7 +210,6 @@ export default function App() {
       <Router>
         <div className='gradient__bg'>
           <Navbar />
-          {/* <Home/> */}
         </div>
         <Switch>
           <Route path="/" exact><Home/></Route>
