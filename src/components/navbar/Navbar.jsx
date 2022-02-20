@@ -20,28 +20,28 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="verynear__navbar">
-      <div className="verynear__navbar-links">
-        <div className="verynear__navbar-links_logo">
+    <div className="very-near__navbar">
+      <div className="very-near__navbar-links">
+        <div className="very-near__navbar-links_logo">
           {/* insert very near logo */}
         </div>
-        <div className="verynear__navbar-links_container">
+        <div className="very-near__navbar-links_container">
           <Menu />
         </div>
       </div>
-      <div className="verynear__navbar-sign">
+      <div className="very-near__navbar-sign">
         <button type='button'>Sign In</button>
       </div>
-      <div className="verynear__navbar-menu">
+      <div className="very-near__navbar-menu">
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
           : <RiMenuFill color="#fff" size={27} onClick={() => setToggleMenu(true)} />
         }
         {toggleMenu && (
-          <div className="verynear__navbar-menu_container scale-up-center">
-            <div className="verynear__navbar-menu_container-links">
+          <div className="very-near__navbar-menu_container scale-up-center">
+            <div className="very-near__navbar-menu_container-links">
               <Menu />
-              <div className="verynear__navbar-menu_container-links-sign">
+              <div className="very-near__navbar-menu_container-links-sign">
                 <button type='button'>Sign In</button>
               </div>
             </div>
