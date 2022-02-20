@@ -199,7 +199,7 @@
 
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
-import { Home, MintingNow, Upcoming, Past } from './pages'
+import { Home, MintingNow, Upcoming, Past, About } from './pages'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
@@ -217,6 +217,7 @@ export default function App() {
           <Route path="/minting-now"><MintingNow/></Route>
           <Route path="/upcoming"><Upcoming/></Route>
           <Route path="/past"><Past/></Route>
+          <Route path="/about"><About/></Route>
         </Switch>
       </Router>
     </div>
