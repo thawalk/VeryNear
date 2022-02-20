@@ -199,15 +199,23 @@
 
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
+import  Home from './pages/home/Home';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
 
 export default function App() {
   return (
     <div className='App'>
-      <div className='gradient__bg'>
-        <Navbar />
-      </div>
+      <Router>
+        <div className='gradient__bg'>
+          <Navbar />
+          {/* <Home/> */}
+        </div>
+        <Switch>
+          <Route path="/" exact><Home/></Route>
+        </Switch>
+      </Router>
     </div>
   )
 };
