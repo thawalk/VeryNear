@@ -6,6 +6,7 @@
 }
 
 body {
+  padding-top: 105px;
   background: var(--color-bg)
 }
 
@@ -15,6 +16,10 @@ a {
 }
 
 .gradient__bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* z-index: 100; */
   /* ff 3.6+ */
   background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 
