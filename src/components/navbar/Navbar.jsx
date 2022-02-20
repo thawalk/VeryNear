@@ -9,7 +9,7 @@ const Menu = () => (
   <>
     <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
     <p><NavLink exact to="/minting-now" activeClassName='active'>Minting Now</NavLink></p>
-    <p><a href="#upcoming">Upcoming</a></p>
+    <p><NavLink exact to="/upcoming" activeClassName='active'>Upcoming</NavLink></p>
     <p><a href="#past">Past</a></p>
     <p><a href="#about_us">About Us</a></p>
     <p><a href="#create">Create</a></p>
