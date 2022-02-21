@@ -3,21 +3,30 @@ import { NavLink } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
 
-
-
-const Menu = () => (
-  <>
-    <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
-    <p><NavLink exact to="/minting-now" activeClassName='active'>Minting Now</NavLink></p>
-    <p><NavLink exact to="/upcoming" activeClassName='active'>Upcoming</NavLink></p>
-    <p><NavLink exact to="/past" activeClassName='active'>Past</NavLink></p>
-    <p><NavLink exact to="/about" activeClassName='active'>About</NavLink></p>
-    <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p>
-  </>
-)
-
-const Navbar = () => {
+function Navbar(props) {
+  const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  function Menu() {
+    return (
+      <>
+        <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
+        <p><NavLink exact to="/minting-now" activeClassName='active'>Minting Now</NavLink></p>
+        <p><NavLink exact to="/upcoming" activeClassName='active'>Upcoming</NavLink></p>
+        <p><NavLink exact to="/past" activeClassName='active'>Past</NavLink></p>
+        <p><NavLink exact to="/about" activeClassName='active'>About</NavLink></p>
+        <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p>
+      </>
+    )
+  }
+
+
+  function setButton() {
+    return (signedIn
+      ? <button type='button' style={{ background: "green" }}>Dashboard</button>
+      : <button type='button'>Sign In</button>
+    )
+  }
 
   return (
     <div className="very-near__navbar">
@@ -30,7 +39,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="very-near__navbar-sign">
-        <button type='button'>Sign In</button>
+        {setButton()}
       </div>
       <div className="very-near__navbar-menu">
         {toggleMenu
@@ -42,7 +51,7 @@ const Navbar = () => {
             <div className="very-near__navbar-menu_container-links">
               <Menu />
               <div className="very-near__navbar-menu_container-links-sign">
-                <button type='button'>Sign In</button>
+                {setButton()}
               </div>
             </div>
           </div>
