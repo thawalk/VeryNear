@@ -27,8 +27,9 @@
 }
 
 .very-near__navbar-sign {
+  column-gap: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -129,6 +130,11 @@
   }
 
   .very-near__navbar-menu_container-links-sign {
-    display: block;
+    /* height: 100px; */
+    /* background: #fff; */
+    row-gap: 10px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
   }
 }
