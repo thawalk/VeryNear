@@ -196,8 +196,8 @@
 //   )
 // }
 
-
-import React from 'react';
+import 'regenerator-runtime/runtime'
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/navbar/Navbar';
 import { Home, MintingNow, Upcoming, Past, About, Create } from './pages'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -205,20 +205,30 @@ import './App.css';
 import './index.css';
 
 export default function App() {
+  const [signedIn, setSignedIn] = useState(false)
+
+  useEffect(() => {
+    if (window.walletConnection.isSignedIn()) {
+      setSignedIn(true)
+    }
+  },
+    []
+  )
+  
   return (
     <div className='App'>
       <Router>
         <div className='gradient__bg'>
-          <Navbar/>
+          <Navbar signedIn={[signedIn, setSignedIn]} />
         </div>
-          
+
         <Switch>
-          <Route path="/" exact><Home/></Route>
-          <Route path="/minting-now"><MintingNow/></Route>
-          <Route path="/upcoming"><Upcoming/></Route>
-          <Route path="/past"><Past/></Route>
-          <Route path="/about"><About/></Route>
-          <Route path="/create"><Create/></Route>
+          <Route path="/" exact><Home /></Route>
+          <Route path="/minting-now"><MintingNow /></Route>
+          <Route path="/upcoming"><Upcoming /></Route>
+          <Route path="/past"><Past /></Route>
+          <Route path="/about"><About /></Route>
+          <Route path="/create"><Create /></Route>
         </Switch>
       </Router>
     </div>
