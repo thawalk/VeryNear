@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
+import { login, logout } from '../../utils'
 
 function Navbar(props) {
   const [signedIn, setSignedIn] = props.signedIn
@@ -23,8 +24,12 @@ function Navbar(props) {
 
   function setButton() {
     return (signedIn
-      ? <button type='button' style={{ background: "green" }}>Dashboard</button>
-      : <button type='button'>Sign In</button>
+      ? <>
+        {/* <div style={{ background: "#fff" }}> */}
+        <button type='button' style={{ background: "green" }}>Dashboard</button>
+        <button type='button' onClick={logout}>Sign Out</button>
+      </>
+      : <button type='button' style={{ background: "green" }} onClick={login}>Sign In</button>
     )
   }
 
