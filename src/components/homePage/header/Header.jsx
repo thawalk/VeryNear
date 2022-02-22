@@ -3,6 +3,11 @@ import './header.css';
 import ImageSlider from './ImageSlider';
 import { SliderData } from './SliderData';
 
+
+const HomePage = () => (
+  <div style={{ backgroundColor: "#6DABF8", height: "1000px" }}>HomePage </div>
+);
+
 const Header = () => {
   return (
     <div className="very-near__header section__padding" id="home">
@@ -19,6 +24,7 @@ const Header = () => {
       <div className='very-near__header-image'>
         <ImageSlider slides={SliderData} />
       </div>
+        {/* <HomePage/> */}
     </div>
   )
 }
