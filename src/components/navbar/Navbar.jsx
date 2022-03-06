@@ -22,7 +22,7 @@ function Navbar(props) {
         <p><a href="#minting-now">Minting Now</a></p>
         <p><a href="#upcoming">Upcoming</a></p>
         <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p>
-        <p><a href="#past-mints">Past</a></p>
+        <p><a href="#past-mints">Past Mints</a></p>
         <p><a href="#about-us">About Us</a></p>
       </>
     )
