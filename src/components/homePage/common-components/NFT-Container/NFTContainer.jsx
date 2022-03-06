@@ -1,0 +1,21 @@
+import React from 'react';
+import NFT from '../NFT/NFT';
+import './nft-container.css';
+
+const NFTContainer = ({ listOfNFTs  }) => (
+  <div className="very_near__nft-container section__padding" id="#minting-now">
+    <div className="very-near__nft-container-heading">
+      <h1 className="gradient__text">Minting Now</h1>
+    </div>
+    <div className="very-near__nft-container-container">
+      <div className="very-near__nft-container-container_groupB">
+        {listOfNFTs.map((NFTImage) => {
+          console.log(NFTImage)
+          return <NFT imgUrl={NFTImage} />
+        })}
+      </div>
+    </div>
+  </div>
+);
+
+export default NFTContainer;
