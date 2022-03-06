@@ -2,8 +2,8 @@ import React from 'react';
 import NFT from '../NFT/NFT';
 import './nft-container.css';
 
-const NFTContainer = ({ listOfNFTs, title, id  }) => (
-  <div className="very_near__nft-container section__padding" id={id}>
+const NFTContainer = ({ listOfNFTs, title  }) => (
+  <div className="very_near__nft-container section__padding">
     <div className="very-near__nft-container-heading">
       <h1 className="gradient__text">{title}</h1>
     </div>
