@@ -11,12 +11,19 @@ function Navbar(props) {
   function Menu() {
     return (
       <>
-        <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
+        {/* <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
         <p><NavLink exact to="/minting-now" activeClassName='active'>Minting Now</NavLink></p>
         <p><NavLink exact to="/upcoming" activeClassName='active'>Upcoming</NavLink></p>
         <p><NavLink exact to="/past" activeClassName='active'>Past</NavLink></p>
         <p><NavLink exact to="/about" activeClassName='active'>About</NavLink></p>
+        <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p> */}
+
+        <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
+        <p><a href="#minting-now" activeClassName='active'>Minting Now</a></p>
+        <p><a href="#upcoming" activeClassName='active'>Upcoming</a></p>
         <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p>
+        <p><a href="#past-mints" activeClassName='active'>Past</a></p>
+        <p><a href="#about-us" activeClassName='active'>About Us</a></p>
       </>
     )
   }
