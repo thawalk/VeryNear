@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
 import { login, logout, testDeploy } from '../../utils'
+import logo from '../../assets/LOGO.svg'
 
 function Navbar(props) {
   const [signedIn, setSignedIn] = props.signedIn
@@ -44,7 +45,7 @@ function Navbar(props) {
     <div className="very-near__navbar">
       <div className="very-near__navbar-links">
         <div className="very-near__navbar-links_logo">
-          {/* insert very near logo */}
+          <img src={logo} />
         </div>
         <div className="very-near__navbar-links_container">
           <Menu />
