@@ -5,7 +5,7 @@ import './nft-container.css';
 const NFTContainer = ({ listOfNFTs, title  }) => (
   <div className="very_near__nft-container section__padding">
     <div className="very-near__nft-container-heading">
-      <h1 className="gradient__text">{title}</h1>
+      <h1 className="white__text">{title}</h1>
     </div>
     <div className="very-near__nft-container-container">
       <div className="very-near__nft-container-container_groupB">
