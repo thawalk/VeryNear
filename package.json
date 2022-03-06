@@ -32,10 +32,12 @@
     "shelljs": "~0.8.4"
   },
   "dependencies": {
+    "@types/react": "^17.0.39",
     "fs": "^0.0.1-security",
     "near-api-js": "~0.43.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.1",
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.5",
