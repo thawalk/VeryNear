@@ -1,24 +1,22 @@
-.very-near__blog-container_article {
+.very-near__nft {
   width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
-  background: var(--color-footer);
 }
 
-.very-near__blog-container_article-image {
-  width: 100%;
-  height: 100%;
-  background: var(--color-bg);
-}
-
-.very-near__blog-container_article-image img {
+.very-near__nft-image {
   width: 100%;
   height: 100%;
 }
 
-.very-near__blog-container_article-content {
+.very-near__nft-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.very-near__nft-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,7 +25,7 @@
   height: 100%;
 }
 
-.very-near__blog-container_article-content p {
+.very-near__nft-content p {
   font-family: var(--font-family);
   font-size: 11.65px;
   font-weight: 700;
@@ -36,7 +34,7 @@
   color: #fff;
 }
 
-.very-near__blog-container_article-content h3 {
+.very-near__nft-content h3 {
   font-family: var(--font-family);
   font-size: 25.11px;
   font-weight: 800;
@@ -47,13 +45,13 @@
   cursor: pointer;
 }
 
-.very-near__blog-container_article-content p:last-child {
+.very-near__nft-content p:last-child {
   cursor: pointer;
 }
 
 
 @media screen and (max-width: 550px) {
-  .very-near__blog-container_article-content h3 {
+  .very-near__nft-content h3 {
       font-size: 18px;
       line-height: 25p;
   }
