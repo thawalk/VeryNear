@@ -10,7 +10,6 @@ const NFTContainer = ({ listOfNFTs, title, id  }) => (
     <div className="very-near__nft-container-container">
       <div className="very-near__nft-container-container_groupB">
         {listOfNFTs.map((NFTImage) => {
-          console.log(NFTImage)
           return <NFT imgUrl={NFTImage} />
         })}
       </div>
