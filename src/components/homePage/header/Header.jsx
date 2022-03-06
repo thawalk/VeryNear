@@ -8,8 +8,7 @@ const HomePage = () => (
   <div style={{ backgroundColor: "#6DABF8", height: "1000px" }}>HomePage </div>
 );
 
-const Header = () => {
-  return (
+const Header = () => (
     <div className="very-near__header section__padding" id="home">
       <div className="very-near__header-content">
         <h1 style={{color: "#fff"}}>A Launchpad on</h1>
@@ -26,7 +25,6 @@ const Header = () => {
       </div>
         {/* <HomePage/> */}
     </div>
-  )
-}
+);
 
 export default Header
