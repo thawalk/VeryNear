@@ -19,11 +19,11 @@ function Navbar(props) {
         <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p> */}
 
         <p><NavLink exact to="/" activeClassName='active'>Home</NavLink></p>
-        <p><a href="#minting-now" activeClassName='active'>Minting Now</a></p>
-        <p><a href="#upcoming" activeClassName='active'>Upcoming</a></p>
+        <p><a href="#minting-now">Minting Now</a></p>
+        <p><a href="#upcoming">Upcoming</a></p>
         <p><NavLink exact to="/create" activeClassName='active'>Create</NavLink></p>
-        <p><a href="#past-mints" activeClassName='active'>Past</a></p>
-        <p><a href="#about-us" activeClassName='active'>About Us</a></p>
+        <p><a href="#past-mints">Past</a></p>
+        <p><a href="#about-us">About Us</a></p>
       </>
     )
   }
