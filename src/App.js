@@ -218,7 +218,7 @@ export default function App() {
   return (
     <div className='App'>
       <Router>
-        <div className='gradient__bg'>
+        <div className='brown__bg'>
           <Navbar signedIn={[signedIn, setSignedIn]} />
         </div>
 

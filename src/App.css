@@ -37,6 +37,14 @@ a {
   background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
 
+.brown__bg {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: #716c32;
+}
+
 .gradient__text {
   background:var(--gradient-text);
   background-clip: text;
