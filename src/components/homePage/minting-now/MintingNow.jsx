@@ -4,7 +4,7 @@ import listOfNFTs from './imports';
 
 const MintingNow = () => (
   <div id="minting-now">
-    <NFTContainer listOfNFTs={listOfNFTs} title="Minting Now"/>
+    <NFTContainer images={listOfNFTs} title="Minting Now"/>
   </div>
 )
 
