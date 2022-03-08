@@ -43,8 +43,21 @@
      width: 100%;
   }
 
+  .very-near__about-us-person {
+    width: 100%;
+  }
+
  .very-near__nft-image {
       height: 350px;
+  }
+
+  .very-near__about-us-person-image {
+    height: 350px;
+  }
+
+  .very-near__about-us-person-label {
+    font-size: 34px;
+    line-height: 65px;
   }
 
   .very-near__nft-container-heading h1 {
