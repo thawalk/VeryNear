@@ -1,17 +1,26 @@
 import React from 'react';
+import AboutUsPerson from '../about-us-person/AboutUsPerson';
 import NFT from '../NFT/NFT';
 import './nft-container.css';
 
-const NFTContainer = ({ listOfNFTs, title  }) => (
+const NFTContainer = ({ images, title, source }) => (
   <div className="very_near__nft-container section__padding">
     <div className="very-near__nft-container-heading">
       <h1 className="white__text">{title}</h1>
     </div>
     <div className="very-near__nft-container-container">
       <div className="very-near__nft-container-container_groupB">
-        {listOfNFTs.map((NFTImage) => {
-          return <NFT imgUrl={NFTImage} />
-        })}
+        {console.log(images)}
+        {
+          source === "about-us" ?
+            images.map((imageHash) => {
+              return <AboutUsPerson imgUrl={imageHash.image} name={imageHash.name} url={imageHash.linkedin}/>
+            })
+            :
+            images.map((image) => {
+              return <NFT imgUrl={image} />
+            })
+        }
       </div>
     </div>
   </div>
