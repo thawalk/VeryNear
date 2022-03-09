@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 6rem;
+  padding: 1.2rem 3rem;
 }
 
 .very-near__navbar-links {
@@ -96,10 +96,10 @@
   display: none;
 }
 
-.active{
-  color: rgb(46, 251, 108);
+/* .active{
+  color: rgb(46, 251, 108); */
   /* color: black; */
-}
+/* } */
 
 @media screen and (max-width: 1050px) {
   .very-near__navbar-links_container {
