@@ -1,6 +1,8 @@
 import React from 'react';
 import LaunchStep from '../common-components/launch-step/LaunchStep';
 import './launch-steps.css';
+import { login, logout, testDeploy } from '../../../utils'
+import { useHistory } from "react-router-dom";
 
 const steps = [
   {
@@ -17,23 +19,38 @@ const steps = [
   }
 ]
 
-const LaunchSteps = () => (
-  <div className="very-near__launch-steps section__padding">
-    <div className="very-near__launch-steps-heading">
-      <h1 className="white__text">Launch your own NFT</h1>
-      <p className="white__text">Create and launch your own collection in 3 easy steps</p>
-    </div>
-    <div className="very-near__launch-steps-container">
-      <div className="very-near__launch-steps-container_groupB">
-        {steps.map((step) => {
-          return <LaunchStep stepNumber={step.number} description={step.description} />
-        })}
+
+
+function LaunchSteps() {
+  const history = useHistory();
+  function checkSignedIn() {
+    if (!window.walletConnection.isSignedIn()) {
+      login()
+    }
+    else {
+      let path = '/create'
+      history.push(path);
+    }
+  }
+
+  return (
+    <div className="very-near__launch-steps section__padding">
+      <div className="very-near__launch-steps-heading">
+        <h1 className="white__text">Launch your own NFT</h1>
+        <p className="white__text">Create and launch your own collection in 3 easy steps</p>
+      </div>
+      <div className="very-near__launch-steps-container">
+        <div className="very-near__launch-steps-container_groupB">
+          {steps.map((step) => {
+            return <LaunchStep stepNumber={step.number} description={step.description} />
+          })}
+        </div>
+      </div>
+      <div className="very-near__launch-steps-btn" onClick={checkSignedIn}>
+        <p>Get Started</p>
       </div>
     </div>
-    <div className="very-near__launch-steps-btn">
-      <p>Get started</p>
-    </div>
-  </div>
-);
+  )
+};
 
 export default LaunchSteps;
