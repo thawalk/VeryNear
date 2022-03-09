@@ -45,6 +45,8 @@ const Create = () => {
   // console.log('Selected')
 
   return (
+    window.walletConnection.isSignedIn() ?
+    
     <div className="very-near__create section__padding">
       <aside>
         <div className="position-stick">
@@ -62,9 +64,9 @@ const Create = () => {
                 <NavLink to='/create/settings' className="sidebar-button" activeClassName="sidebar-buttonClicked">Account Settings</NavLink>  
             </div>
 
-            <div className="sidebar-signout">
+            {/* <div className="sidebar-signout">
               <button>Sign out</button> 
-            </div>
+            </div> */}
           </div>
         </div>
       </aside>
@@ -137,6 +139,13 @@ const Create = () => {
         </FormProvider>
       </div>
     </div>
+    :
+    <div className="center">
+    <h1>
+      Connect your wallet!
+    </h1>
+    </div>
+  
   );
 }
 
