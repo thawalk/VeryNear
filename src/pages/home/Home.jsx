@@ -9,7 +9,7 @@ import "../../App.css"
 
 const Home = () => {
   return (
-    <div className="App">
+    <div style={{ paddingTop: '46px' }}>
       <Header/>
       <MintingNow/>
       <Upcoming/>

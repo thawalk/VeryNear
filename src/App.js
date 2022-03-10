@@ -199,7 +199,7 @@
 import 'regenerator-runtime/runtime'
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/navbar/Navbar';
-import { Home, Create } from './pages'
+import { Home, Create, Mint } from './pages'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
@@ -225,6 +225,7 @@ export default function App() {
         <Switch>
           <Route path="/" exact><Home /></Route>
           <Route path="/create"><Create /></Route>
+          <Route path="/mint/monkeyBusiness"><Mint /></Route>
         </Switch>
       </Router>
     </div>

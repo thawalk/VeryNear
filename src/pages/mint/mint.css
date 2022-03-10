@@ -1,0 +1,74 @@
+.very-near__mint {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(180deg, #319f99 1.84%, #8ddbd5 102.67%);
+  padding-top: 106px;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+  color: black;
+  row-gap: 48px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.poweredBy {
+  display: flex;
+  background-color: #716c32;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.actionButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 60%;
+}
+
+.mintButton {
+  background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
+  margin: 4px 0px;
+  min-height: 36px;
+  line-height: 36px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.connectWalletButton {
+  background: #716c32;
+  color: white;
+  margin: 4px 0px;
+  min-height: 36px;
+  line-height: 36px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.buyNearLink {
+  text-decoration-line: underline;
+  align-self: center;
+}

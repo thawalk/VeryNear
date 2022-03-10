@@ -4,3 +4,4 @@ export { default as Upcoming } from './upcoming/Upcoming';
 export { default as Past } from './past/Past';
 export { default as About } from './about/About';
 export { default as Create } from './create/Create';
+export { default as Mint } from './mint/Mint'

@@ -1,5 +1,6 @@
 .very-near__header {
   display: flex;
+  padding-top: 106px;
 }
 
 .very-near__header-content {
@@ -64,7 +65,7 @@
   line-height: 27px;
   background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
   /* border-radius: 5px 0px 0px 5px; */
-  color:#FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   outline: none;
   /* padding: 0 1rem; */
@@ -93,7 +94,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 38px;
-  color:#FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
