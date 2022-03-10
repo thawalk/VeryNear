@@ -7,13 +7,13 @@ import LauchSteps from '../../components/homePage/launch-steps/LaunchSteps';
 import AboutUs from '../../components/homePage/about-us/AboutUs';
 import "../../App.css"
 
-const Home = () => {
+function Home(props) {
   return (
     <div style={{ paddingTop: '46px' }}>
-      <Header/>
+      <Header showOptions={props.showOptions}/>
       <MintingNow/>
       <Upcoming/>
-      <LauchSteps/>
+      <LauchSteps showOptions={props.showOptions}/>
       <PastMints/>
       <AboutUs/>
     </div>

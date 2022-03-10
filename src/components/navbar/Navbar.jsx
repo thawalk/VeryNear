@@ -9,7 +9,7 @@ import logo from '../../assets/LOGO.svg'
 function Navbar(props) {
   const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showOptions, setShowOptions] = useState(false);
+  const [showOptions, setShowOptions] = props.showOptions
   const history = useHistory();
 
 

@@ -206,6 +206,7 @@ import './index.css';
 
 export default function App() {
   const [signedIn, setSignedIn] = useState(false)
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     if (window.walletConnection.isSignedIn()) {
@@ -219,11 +220,11 @@ export default function App() {
     <div className='App'>
       <Router>
         <div className='brown__bg'>
-          <Navbar signedIn={[signedIn, setSignedIn]} />
+          <Navbar signedIn={[signedIn, setSignedIn]} showOptions={[showOptions, setShowOptions]}/>
         </div>
 
         <Switch>
-          <Route path="/" exact><Home /></Route>
+          <Route path="/" exact><Home showOptions={[showOptions, setShowOptions]}/></Route>
           <Route path="/create"><Create /></Route>
           <Route path="/mint/monkeyBusiness"><Mint /></Route>
         </Switch>
