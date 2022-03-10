@@ -26,22 +26,25 @@
 }
 
 .very-near__launch-steps-btn {
+  /* background: red; */
   border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   cursor: pointer;
   background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
 }
 
 .very-near__launch-steps-btn p {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: var(--font-family);
-  line-height: 21px;
+  line-height: 10px;
   color: #fff;
   word-spacing: 2px;
 }

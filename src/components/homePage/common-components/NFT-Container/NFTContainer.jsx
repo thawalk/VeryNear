@@ -10,7 +10,6 @@ const NFTContainer = ({ images, title, source }) => (
     </div>
     <div className="very-near__nft-container-container">
       <div className="very-near__nft-container-container_groupB">
-        {console.log(images)}
         {
           source === "about-us" ?
             images.map((imageHash) => {
