@@ -37,6 +37,7 @@ function Navbar(props) {
     // else {
       let path = '/' 
       history.push(path);
+      setShowOptions(true)
     // }
   }
 

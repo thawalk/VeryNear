@@ -11,11 +11,11 @@ function Home(props) {
   return (
     <div style={{ paddingTop: '46px' }}>
       <Header showOptions={props.showOptions}/>
-      <MintingNow/>
-      <Upcoming/>
+      <MintingNow showOptions={props.showOptions}/>
+      <Upcoming showOptions={props.showOptions}/>
       <LauchSteps showOptions={props.showOptions}/>
-      <PastMints/>
-      <AboutUs/>
+      <PastMints showOptions={props.showOptions}/>
+      <AboutUs showOptions={props.showOptions}/>
     </div>
   );
 }
