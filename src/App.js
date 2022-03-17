@@ -208,6 +208,7 @@ import Big from 'big.js'; // Guest-book
 
 export default function App({ contract, currentUser, nearConfig, wallet }) {
   const [signedIn, setSignedIn] = useState(false)
+  const [showOptions, setShowOptions] = useState(false);
 
   const SUGGESTED_DONATION = '0';   // Guest-book
   const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed(); // Guest-book
@@ -270,11 +271,11 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
       <button onClick={onSubmit} style={{ marginTop: '100px' }}>TEST SUBMIT</button>
       <Router>
         <div className='brown__bg'>
-          <Navbar currentUser={currentUser} signIn={signIn} signOut={signOut} />
+          <Navbar currentUser={currentUser} signIn={signIn} signOut={signOut} showOptions={[showOptions, setShowOptions]} />
         </div>
 
         <Switch>
-          <Route path="/" exact><Home /></Route>
+          <Route path="/" exact><Home showOptions={[showOptions, setShowOptions]}/></Route>
           <Route path="/create"><Create /></Route>
           <Route path="/mint/monkeyBusiness"><Mint /></Route>
         </Switch>

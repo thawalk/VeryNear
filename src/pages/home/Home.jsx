@@ -7,15 +7,15 @@ import LauchSteps from '../../components/homePage/launch-steps/LaunchSteps';
 import AboutUs from '../../components/homePage/about-us/AboutUs';
 import "../../App.css"
 
-const Home = () => {
+function Home(props) {
   return (
     <div style={{ paddingTop: '46px' }}>
-      <Header/>
-      <MintingNow/>
-      <Upcoming/>
-      <LauchSteps/>
-      <PastMints/>
-      <AboutUs/>
+      <Header showOptions={props.showOptions}/>
+      <MintingNow showOptions={props.showOptions}/>
+      <Upcoming showOptions={props.showOptions}/>
+      <LauchSteps showOptions={props.showOptions}/>
+      <PastMints showOptions={props.showOptions}/>
+      <AboutUs showOptions={props.showOptions}/>
     </div>
   );
 }

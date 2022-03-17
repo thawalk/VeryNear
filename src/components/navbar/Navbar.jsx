@@ -9,7 +9,7 @@ import logo from '../../assets/LOGO.svg'
 function Navbar({ currentUser, signIn, signOut }) {
   // const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showOptions, setShowOptions] = useState(false);
+  const [showOptions, setShowOptions] = props.showOptions
   const history = useHistory();
 
   function checkPath(source) {
@@ -36,6 +36,7 @@ function Navbar({ currentUser, signIn, signOut }) {
     // else {
       let path = '/' 
       history.push(path);
+      setShowOptions(true)
     // }
   }
 
