@@ -204,22 +204,73 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import './index.css';
 
-export default function App() {
+import Big from 'big.js'; // Guest-book
+
+export default function App({ contract, currentUser, nearConfig, wallet }) {
   const [signedIn, setSignedIn] = useState(false)
 
+  const SUGGESTED_DONATION = '0';   // Guest-book
+  const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed(); // Guest-book
+  const [messages, setMessages] = useState([]); // Guest-book
+
+  console.log("HELLO IN APP")
+  console.log("Contract:", contract)
+  console.log('currentUser:', currentUser)
+  console.log('nearConfig:', nearConfig)
+  console.log('wallet:', wallet)
+
+  const signIn = () => {
+    wallet.requestSignIn(
+      {contractId: nearConfig.contractName},
+      'NEAR David Test',
+      null,
+      null
+    )
+  }
+
+  const signOut = () => {
+    wallet.signOut();
+    window.location.replace(window.location.origin + window.location.pathname)
+  }
+
   useEffect(() => {
-    if (window.walletConnection.isSignedIn()) {
-      setSignedIn(true)
-    }
-  },
-    []
-  )
+    contract.getMessages().then(setMessages)
+  }, [])
+  console.log('Messages:', messages);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("SUBMITING!")
+    contract.addMessage(
+      { text: "Annyeonghaseyeo from Korea!" },
+      BOATLOAD_OF_GAS,
+      Big('0').times(10 ** 24).toFixed()
+    ).then(() => {
+      console.log("Over. About to get messages.")
+      contract.getMessages().then(messages => {
+        setMessages(messages);
+        message.value = '';
+        donation.value = SUGGESTED_DONATION;
+        message.focus();
+      });
+    });
+  }
+
+  // useEffect(() => {
+  //   if (window.walletConnection.isSignedIn()) {
+  //     setSignedIn(true)
+  //   }
+  // },
+  //   []
+  // )
   
   return (
     <div className='App'>
+      <button onClick={onSubmit} style={{ marginTop: '100px' }}>TEST SUBMIT</button>
       <Router>
         <div className='brown__bg'>
-          <Navbar signedIn={[signedIn, setSignedIn]} />
+          <Navbar currentUser={currentUser} signIn={signIn} signOut={signOut} />
         </div>
 
         <Switch>

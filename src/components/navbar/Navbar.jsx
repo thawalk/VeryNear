@@ -6,12 +6,11 @@ import './navbar.css';
 import { login, logout, testDeploy } from '../../utils'
 import logo from '../../assets/LOGO.svg'
 
-function Navbar(props) {
-  const [signedIn, setSignedIn] = props.signedIn
+function Navbar({ currentUser, signIn, signOut }) {
+  // const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
   const history = useHistory();
-
 
   function checkPath(source) {
     if (source === "home") {
@@ -61,16 +60,27 @@ function Navbar(props) {
   }
 
 
-  function setButton() {
+  // function setButton() {
+  //   return (
+  //     signedIn ?
+  //       <>
+  //         {/* <div style={{ background: "#fff" }}> */}
+  //         {/* <button type='button' style={{ background: "green" }} onClick={testDeploy}>Dashboard</button> */}
+  //         <button type='button' onClick={logout}>Disconnect Wallet</button>
+  //       </>
+  //       :
+  //       <button type='button' style={{ background: "green" }} onClick={login}>Connect Wallet</button>
+  //   )
+  // }
+
+  const setButton = () => {
     return (
-      signedIn ?
-        <>
-          {/* <div style={{ background: "#fff" }}> */}
-          {/* <button type='button' style={{ background: "green" }} onClick={testDeploy}>Dashboard</button> */}
-          <button type='button' onClick={logout}>Disconnect Wallet</button>
-        </>
-        :
-        <button type='button' style={{ background: "green" }} onClick={login}>Connect Wallet</button>
+      currentUser ?
+       <>
+        <button type='button' onClick={() => signOut()}>Disconnect Wallet</button>
+       </>
+       :
+       <button type='button' style={{ background: "green" }} onClick={() => signIn()}>Connect Wallet</button>
     )
   }
 
