@@ -6,38 +6,37 @@ import './navbar.css';
 import { login, logout, testDeploy } from '../../utils'
 import logo from '../../assets/LOGO.svg'
 
-function Navbar({ currentUser, signIn, signOut }) {
+function Navbar({ currentUser, showOptions, showOptionsFunc }) {
   // const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showOptions, setShowOptions] = props.showOptions
   const history = useHistory();
 
   function checkPath(source) {
     if (source === "home") {
-      setShowOptions(true)
+      showOptionsFunc(true)
     }
     else {
-      setShowOptions(false)
+      showOptionsFunc(false)
     }
   }
 
   useEffect(() => {
     if (window.location.pathname === "/") {
-      setShowOptions(true)
+      showOptionsFunc(true)
     }
   },
     []
   )
 
   function checkSignedIn() {
-    // if (!window.walletConnection.isSignedIn()) {
-    //   login()
-    // }
-    // else {
+    if (!currentUser) {
+      login()
+    }
+    else {
       let path = '/' 
       history.push(path);
-      setShowOptions(true)
-    // }
+      showOptionsFunc(true)
+    }
   }
 
   function Menu() {
@@ -78,7 +77,7 @@ function Navbar({ currentUser, signIn, signOut }) {
     return (
       currentUser ?
        <>
-        <button type='button' onClick={() => signOut()}>Disconnect Wallet</button>
+        <button type='button' onClick={() => logout()}>Disconnect Wallet</button>
        </>
        :
        <button type='button' style={{ background: "green" }} onClick={() => signIn()}>Connect Wallet</button>

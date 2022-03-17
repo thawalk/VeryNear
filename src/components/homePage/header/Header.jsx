@@ -12,15 +12,14 @@ const HomePage = () => (
 
 // const Header = ({ openDialog }) => (
 
-function Header(props) {
-  const [showOptions, setShowOptions] = props.showOptions
+function Header({ showOptionsFunc }) {
   const history = useHistory();
   function checkSignedIn() {
     if (!window.walletConnection.isSignedIn()) {
       login()
     }
     else {
-      setShowOptions(false)
+      showOptionsFunc(false)
       let path = '/create' 
       history.push(path);
     }

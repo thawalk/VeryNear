@@ -7,15 +7,15 @@ import LauchSteps from '../../components/homePage/launch-steps/LaunchSteps';
 import AboutUs from '../../components/homePage/about-us/AboutUs';
 import "../../App.css"
 
-function Home(props) {
+function Home({ showOptionsFunc }) {
   return (
     <div style={{ paddingTop: '46px' }}>
-      <Header showOptions={props.showOptions}/>
-      <MintingNow showOptions={props.showOptions}/>
-      <Upcoming showOptions={props.showOptions}/>
-      <LauchSteps showOptions={props.showOptions}/>
-      <PastMints showOptions={props.showOptions}/>
-      <AboutUs showOptions={props.showOptions}/>
+      <Header showOptionsFunc={showOptionsFunc} />
+      <MintingNow showOptionsFunc={showOptionsFunc} />
+      <Upcoming showOptionsFunc={showOptionsFunc} />
+      <LauchSteps showOptionsFunc={showOptionsFunc} />
+      <PastMints showOptionsFunc={showOptionsFunc} />
+      <AboutUs showOptionsFunc={showOptionsFunc}/>
     </div>
   );
 }

@@ -220,20 +220,6 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
   console.log('nearConfig:', nearConfig)
   console.log('wallet:', wallet)
 
-  const signIn = () => {
-    wallet.requestSignIn(
-      {contractId: nearConfig.contractName},
-      'NEAR David Test',
-      null,
-      null
-    )
-  }
-
-  const signOut = () => {
-    wallet.signOut();
-    window.location.replace(window.location.origin + window.location.pathname)
-  }
-
   useEffect(() => {
     contract.getMessages().then(setMessages)
   }, [])
@@ -271,11 +257,11 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
       <button onClick={onSubmit} style={{ marginTop: '100px' }}>TEST SUBMIT</button>
       <Router>
         <div className='brown__bg'>
-          <Navbar currentUser={currentUser} signIn={signIn} signOut={signOut} showOptions={[showOptions, setShowOptions]} />
+          <Navbar currentUser={currentUser} showOptions={showOptions} showOptionsFunc={setShowOptions} />
         </div>
 
         <Switch>
-          <Route path="/" exact><Home showOptions={[showOptions, setShowOptions]}/></Route>
+          <Route path="/" exact><Home showOptions={showOptions} showOptionsFunc={setShowOptions}/></Route>
           <Route path="/create"><Create /></Route>
           <Route path="/mint/monkeyBusiness"><Mint /></Route>
         </Switch>

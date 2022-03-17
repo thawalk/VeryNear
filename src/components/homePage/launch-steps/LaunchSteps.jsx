@@ -21,15 +21,14 @@ const steps = [
 
 
 
-function LaunchSteps(props) {
-  const [showOptions, setShowOptions] = props.showOptions
+function LaunchSteps({ showOptionsFunc }) {
   const history = useHistory();
   function checkSignedIn() {
     if (!window.walletConnection.isSignedIn()) {
       login()
     }
     else {
-      setShowOptions(false)
+      showOptionsFunc(false)
       let path = '/create'
       history.push(path);
     }

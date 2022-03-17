@@ -25,18 +25,32 @@ export async function initContract() {
   })
 }
 
-export function logout() {
-  window.walletConnection.signOut()
-  // reload page
-  window.location.replace(window.location.origin + window.location.pathname)
+// export function logout() {
+//   window.walletConnection.signOut()
+//   // reload page
+//   window.location.replace(window.location.origin + window.location.pathname)
+// }
+
+// export function login() {
+//   // Allow the current app to make calls to the specified contract on the
+//   // user's behalf.
+//   // This works by creating a new access key for the user's account and storing
+//   // the private key in localStorage.
+//   window.walletConnection.requestSignIn('')
+// }
+
+export const login = () => {
+  wallet.requestSignIn(
+    {contractId: nearConfig.contractName},
+    'NEAR David Test',
+    null,
+    null
+  )
 }
 
-export function login() {
-  // Allow the current app to make calls to the specified contract on the
-  // user's behalf.
-  // This works by creating a new access key for the user's account and storing
-  // the private key in localStorage.
-  window.walletConnection.requestSignIn('')
+export const logout = () => {
+  wallet.signOut();
+  window.location.replace(window.location.origin + window.location.pathname)
 }
 
 export async function testDeploy() {
