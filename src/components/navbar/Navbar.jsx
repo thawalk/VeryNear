@@ -94,9 +94,9 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
           <Menu />
         </div>
       </div>
-      <div className="very-near__navbar-sign">
+      {/* <div className="very-near__navbar-sign">
         {setButton()}
-      </div>
+      </div> */}
       <div className="very-near__navbar-menu">
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
@@ -106,9 +106,9 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
           <div className="very-near__navbar-menu_container scale-up-center">
             <div className="very-near__navbar-menu_container-links">
               <Menu />
-              <div className="very-near__navbar-menu_container-links-sign">
+              {/* <div className="very-near__navbar-menu_container-links-sign">
                 {setButton()}
-              </div>
+              </div> */}
             </div>
           </div>
         )
