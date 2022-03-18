@@ -277,7 +277,7 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
         <Switch>
           <Route path="/" exact><Home showOptions={showOptions} currentUser={currentUser} showOptionsFunc={setShowOptions} login={login} /></Route>
           <Route path="/create"><Create currentUser={currentUser} /></Route>
-          <Route path="/mint/monkeyBusiness"><Mint currentUser={currentUser} login={login} contract={contract} wallet={wallet}/></Route>
+          <Route path="/mint/monkeyBusiness"><Mint currentUser={currentUser} login={login} contract={contract} wallet={wallet} logout={logout}/></Route>
         </Switch>
       </Router>
     </div>

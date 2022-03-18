@@ -21,14 +21,14 @@ const mintData = {
     description: "Where 500 randomly generated NFTs on the Solana blockchain generating $BANANA. Your NFT itself doubles as membership to Big Balla Chimps with exclusive access to a well-structured community, limited merchandise, web-casino, events, and other collections such as Big Balla Mutants. Our goal is to help anyone break their way into the NFT world successfully while having fun."
 }
 
-const Mint = ({ currentUser, login, contract, wallet }) => {
+const Mint = ({ currentUser, login, contract, wallet, logout }) => {
     const history = useHistory();
     const handleConnectWallet = () => {
         if (!currentUser) {
             login()
         }
         else {
-
+            logout()
         }
     }
 
@@ -56,7 +56,9 @@ const Mint = ({ currentUser, login, contract, wallet }) => {
         const receipts_outcome = result.receipts_outcome;
         console.log("RECEIPTS:", receipts_outcome)  // token_id stored in receipts_outcome
     }
-    getTransactionStatus("Ca7qhgQ7MNagDQ7FdtxSGktAr1bJ56kphfPaf9knpcFP", currentUser.accountId)
+    if (currentUser) {
+        getTransactionStatus("Ca7qhgQ7MNagDQ7FdtxSGktAr1bJ56kphfPaf9knpcFP", currentUser.accountId)
+    }
 
     // Function to get NFT TOKEN METADATA. It's called directly below..
     // TODO: Get the NFT token metadata only after handleMint is complete in a .then function.. or useEffect
@@ -82,10 +84,16 @@ const Mint = ({ currentUser, login, contract, wallet }) => {
                 <p>{mintData.description}</p>
 
                 {currentUser ? (
+                    <>
                     <div className="actionButtonWrapper">
                         <button onClick={() => handleMint()}>Mint</button>
+                        
                         {/* <a href='https://uphold.com/en-us/assets/crypto/buy-near' className='buyNearLink'>No NEAR? Buy here.</a> */}
                     </div>
+                    <div className="actionButtonWrapper">
+                    <button onClick={() => handleConnectWallet()}>Disconnect Wallet</button>
+                    </div>
+                    </>
                 ) : (
                     <div className="actionButtonWrapper">
                         <button onClick={() => handleConnectWallet()}>Connect Wallet</button>
