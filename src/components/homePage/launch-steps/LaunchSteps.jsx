@@ -20,17 +20,12 @@ const steps = [
 
 
 
-function LaunchSteps({ showOptionsFunc, currentUser, login }) {
+function LaunchSteps({ showOptionsFunc }) {
   const history = useHistory();
-  function checkSignedIn() {
-    if (!currentUser) {
-      login()
-    }
-    else {
-      showOptionsFunc(false)
-      let path = '/create'
-      history.push(path);
-    }
+  function createPage() {
+    showOptionsFunc(false)
+    let path = '/create'
+    history.push(path);
   }
 
   return (
@@ -46,7 +41,7 @@ function LaunchSteps({ showOptionsFunc, currentUser, login }) {
           })}
         </div>
       </div>
-      <div className="very-near__launch-steps-btn" onClick={checkSignedIn}>
+      <div className="very-near__launch-steps-btn" onClick={createPage}>
         <p>Get Started</p>
       </div>
     </div>
