@@ -1,7 +1,8 @@
 import React from 'react';
+import ImageSlider from '../../common-components/image-slider/ImageSlider';
 import AboutUsPerson from '../about-us-person/AboutUsPerson';
-import NFT from '../NFT/NFT';
 import './nft-container.css';
+import '../NFT/nft.css'
 
 const NFTContainer = ({ images, title, source, showOptionsFunc }) => {
   return (
@@ -17,8 +18,14 @@ const NFTContainer = ({ images, title, source, showOptionsFunc }) => {
                 return <AboutUsPerson imgUrl={imageHash.image} name={imageHash.name} url={imageHash.linkedin} />
               })
               :
-              images.map((image) => {
-                return <NFT imgUrl={image} showOptionsFunc={showOptionsFunc} />
+              images.map((group) => {
+                return (
+                <div className="very-near__nft">
+                  <div className="very-near__nft-image">
+                    <ImageSlider slides={group} showOptionsFunc={showOptionsFunc} />
+                  </div>
+                </div>
+                )
               })
           }
         </div>
