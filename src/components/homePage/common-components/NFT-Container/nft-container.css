@@ -20,14 +20,15 @@
 .very-near__nft-container-container {
   display: flex;
   flex-direction: row;
+  /* background: red; */
 }
 
 .very-near__nft-container-container_groupB {
   flex: 1;
 
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 }
 
 @media screen and (max-width: 990px) {
