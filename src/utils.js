@@ -1,6 +1,13 @@
 import { connect, Contract, keyStores, WalletConnection } from 'near-api-js'
 import { fs } from 'fs'
 import getConfig from './config'
+import * as naj from "near-api-js";
+
+export const provider = new naj.providers.JsonRpcProvider(
+  "https://archival-rpc.testnet.near.org"
+);
+
+// EVERYTHING BELOW DUNNIND
 
 const nearConfig = getConfig(process.env.NODE_ENV || 'development')
 
@@ -38,20 +45,6 @@ export async function initContract() {
 //   // the private key in localStorage.
 //   window.walletConnection.requestSignIn('')
 // }
-
-export const login = () => {
-  wallet.requestSignIn(
-    {contractId: nearConfig.contractName},
-    'NEAR David Test',
-    null,
-    null
-  )
-}
-
-export const logout = () => {
-  wallet.signOut();
-  window.location.replace(window.location.origin + window.location.pathname)
-}
 
 export async function testDeploy() {
   const keyStore = new keyStores.BrowserLocalStorageKeyStore();

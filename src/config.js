@@ -1,5 +1,6 @@
 // const CONTRACT_NAME = 'nft.crypto_overflow.testnet'
-const CONTRACT_NAME = 'guest-book.testnet'
+const CONTRACT_NAME = 'nft-example.crypto_overflow.testnet'
+// const CONTRACT_NAME = 'guest-book.testnet'
 
 function getConfig(env) {
   switch (env) {

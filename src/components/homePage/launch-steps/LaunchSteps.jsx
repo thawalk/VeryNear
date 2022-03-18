@@ -1,7 +1,6 @@
 import React from 'react';
 import LaunchStep from '../common-components/launch-step/LaunchStep';
 import './launch-steps.css';
-import { login, logout, testDeploy } from '../../../utils'
 import { useHistory } from "react-router-dom";
 
 const steps = [
@@ -21,10 +20,10 @@ const steps = [
 
 
 
-function LaunchSteps({ showOptionsFunc }) {
+function LaunchSteps({ showOptionsFunc, currentUser, login }) {
   const history = useHistory();
   function checkSignedIn() {
-    if (!window.walletConnection.isSignedIn()) {
+    if (!currentUser) {
       login()
     }
     else {

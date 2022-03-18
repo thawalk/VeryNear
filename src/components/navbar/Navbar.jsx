@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom'
 import { NavLink, useHistory } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
-import { login, logout, testDeploy } from '../../utils'
+// import { login, logout, testDeploy } from '../../utils'
 import logo from '../../assets/LOGO.svg'
 
-function Navbar({ currentUser, showOptions, showOptionsFunc }) {
+function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
   // const [signedIn, setSignedIn] = props.signedIn
   const [toggleMenu, setToggleMenu] = useState(false);
   const history = useHistory();
@@ -80,7 +80,7 @@ function Navbar({ currentUser, showOptions, showOptionsFunc }) {
         <button type='button' onClick={() => logout()}>Disconnect Wallet</button>
        </>
        :
-       <button type='button' style={{ background: "green" }} onClick={() => signIn()}>Connect Wallet</button>
+       <button type='button' style={{ background: "green" }} onClick={() => login()}>Connect Wallet</button>
     )
   }
 

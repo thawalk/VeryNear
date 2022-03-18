@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './header.css';
 import ImageSlider from './ImageSlider';
 import { SliderData } from './SliderData';
-import { login, logout, testDeploy } from '../../../utils'
 import { useHistory } from "react-router-dom";
 
 
@@ -12,10 +11,10 @@ const HomePage = () => (
 
 // const Header = ({ openDialog }) => (
 
-function Header({ showOptionsFunc }) {
+function Header({ showOptionsFunc, currentUser, login }) {
   const history = useHistory();
   function checkSignedIn() {
-    if (!window.walletConnection.isSignedIn()) {
+    if (!currentUser) {
       login()
     }
     else {

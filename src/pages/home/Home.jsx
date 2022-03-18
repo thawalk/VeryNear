@@ -7,13 +7,13 @@ import LauchSteps from '../../components/homePage/launch-steps/LaunchSteps';
 import AboutUs from '../../components/homePage/about-us/AboutUs';
 import "../../App.css"
 
-function Home({ showOptionsFunc }) {
+function Home({ showOptionsFunc, currentUser, login }) {
   return (
     <div style={{ paddingTop: '46px' }}>
-      <Header showOptionsFunc={showOptionsFunc} />
+      <Header showOptionsFunc={showOptionsFunc} currentUser={currentUser} login={login} />
       <MintingNow showOptionsFunc={showOptionsFunc} />
       <Upcoming showOptionsFunc={showOptionsFunc} />
-      <LauchSteps showOptionsFunc={showOptionsFunc} />
+      <LauchSteps showOptionsFunc={showOptionsFunc} currentUser={currentUser} login={login} />
       <PastMints showOptionsFunc={showOptionsFunc} />
       <AboutUs showOptionsFunc={showOptionsFunc}/>
     </div>

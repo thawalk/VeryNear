@@ -8,7 +8,7 @@ const userData = {
   userEmail: "dabipotato@gmail.com"
 }
 
-const Create = () => {
+const Create = ({ currentUser }) => {
   const fileRef = useRef()
   const zipfileRef = useRef()
   const [ selectedImage, setSelectedImage ] = useState(null)
@@ -45,7 +45,7 @@ const Create = () => {
   // console.log('Selected')
 
   return (
-    window.walletConnection.isSignedIn() ?
+    currentUser ?
     
     <div className="very-near__create section__padding">
       <aside>

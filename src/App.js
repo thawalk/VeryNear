@@ -214,16 +214,30 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
   const BOATLOAD_OF_GAS = Big(3).times(10 ** 13).toFixed(); // Guest-book
   const [messages, setMessages] = useState([]); // Guest-book
 
-  console.log("HELLO IN APP")
-  console.log("Contract:", contract)
+  // console.log("HELLO IN APP")
+  // console.log("Contract:", contract)
   console.log('currentUser:', currentUser)
-  console.log('nearConfig:', nearConfig)
-  console.log('wallet:', wallet)
+  // console.log('nearConfig:', nearConfig)
+  // console.log('wallet:', wallet)
 
-  useEffect(() => {
-    contract.getMessages().then(setMessages)
-  }, [])
-  console.log('Messages:', messages);
+  const login = () => {
+    wallet.requestSignIn(
+      {contractId: nearConfig.contractName},
+      'NEAR David Test',
+      null,
+      null
+    )
+  }
+  
+  const logout = () => {
+    wallet.signOut();
+    window.location.replace(window.location.origin + window.location.pathname)
+  }
+
+  // useEffect(() => {
+  //   contract.getMessages().then(setMessages)
+  // }, [])
+  // console.log('Messages:', messages);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -254,16 +268,16 @@ export default function App({ contract, currentUser, nearConfig, wallet }) {
   
   return (
     <div className='App'>
-      <button onClick={onSubmit} style={{ marginTop: '100px' }}>TEST SUBMIT</button>
+      {/* <button onClick={onSubmit} style={{ marginTop: '100px' }}>TEST SUBMIT</button> */}
       <Router>
         <div className='brown__bg'>
-          <Navbar currentUser={currentUser} showOptions={showOptions} showOptionsFunc={setShowOptions} />
+          <Navbar currentUser={currentUser} showOptions={showOptions} showOptionsFunc={setShowOptions} login={login} logout={logout} />
         </div>
 
         <Switch>
-          <Route path="/" exact><Home showOptions={showOptions} showOptionsFunc={setShowOptions}/></Route>
-          <Route path="/create"><Create /></Route>
-          <Route path="/mint/monkeyBusiness"><Mint /></Route>
+          <Route path="/" exact><Home showOptions={showOptions} currentUser={currentUser} showOptionsFunc={setShowOptions} login={login} /></Route>
+          <Route path="/create"><Create currentUser={currentUser} /></Route>
+          <Route path="/mint/monkeyBusiness"><Mint currentUser={currentUser} login={login} contract={contract} wallet={wallet}/></Route>
         </Switch>
       </Router>
     </div>
