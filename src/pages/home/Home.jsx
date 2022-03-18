@@ -10,12 +10,12 @@ import "../../App.css"
 function Home({ showOptionsFunc, currentUser, login }) {
   return (
     <div style={{ paddingTop: '46px' }}>
-      <Header showOptionsFunc={showOptionsFunc} currentUser={currentUser} login={login} />
+      <Header showOptionsFunc={showOptionsFunc} />
       <MintingNow showOptionsFunc={showOptionsFunc} />
       <Upcoming showOptionsFunc={showOptionsFunc} />
-      <LauchSteps showOptionsFunc={showOptionsFunc} currentUser={currentUser} login={login} />
+      <LauchSteps showOptionsFunc={showOptionsFunc} />
       <PastMints showOptionsFunc={showOptionsFunc} />
-      <AboutUs showOptionsFunc={showOptionsFunc}/>
+      <AboutUs showOptionsFunc={showOptionsFunc} />
     </div>
   );
 }
