@@ -14,13 +14,13 @@ const NFTContainer = ({ images, title, source, showOptionsFunc }) => {
         <div className="very-near__nft-container-container_groupB">
           {
             source === "about-us" ?
-              images.map((imageHash) => {
-                return <AboutUsPerson imgUrl={imageHash.image} name={imageHash.name} url={imageHash.linkedin} />
+              images.map((imageHash, index) => {
+                return <AboutUsPerson imgUrl={imageHash.image} name={imageHash.name} url={imageHash.linkedin} key={index}/>
               })
               :
-              images.map((group) => {
+              images.map((group, index) => {
                 return (
-                <div className="very-near__nft">
+                <div className="very-near__nft" key={index}>
                   <div className="very-near__nft-image">
                     <ImageSlider slides={group} showOptionsFunc={showOptionsFunc} />
                   </div>

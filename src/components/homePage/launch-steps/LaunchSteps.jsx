@@ -36,8 +36,8 @@ function LaunchSteps({ showOptionsFunc }) {
       </div>
       <div className="very-near__launch-steps-container">
         <div className="very-near__launch-steps-container_groupB">
-          {steps.map((step) => {
-            return <LaunchStep stepNumber={step.number} description={step.description} />
+          {steps.map((step, index) => {
+            return <LaunchStep stepNumber={step.number} description={step.description} key={index}/>
           })}
         </div>
       </div>
