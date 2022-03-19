@@ -13,7 +13,7 @@ function Home({ showOptionsFunc, currentUser, login }) {
       <Header showOptionsFunc={showOptionsFunc} />
       <MintingNow showOptionsFunc={showOptionsFunc} />
       <Upcoming showOptionsFunc={showOptionsFunc} />
-      <LauchSteps showOptionsFunc={showOptionsFunc} />
+      {/* <LauchSteps showOptionsFunc={showOptionsFunc} /> */}
       <PastMints showOptionsFunc={showOptionsFunc} />
       <AboutUs showOptionsFunc={showOptionsFunc} />
     </div>
