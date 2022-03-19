@@ -45,10 +45,10 @@ const Create = ({ currentUser }) => {
   // console.log('Selected')
 
   return (
-    currentUser ?
+    // currentUser ?
     
     <div className="very-near__create section__padding">
-      <aside>
+      {/* <aside>
         <div className="position-stick">
           <div className="sidebar">
             <div className="sidebar-content">
@@ -62,20 +62,20 @@ const Create = ({ currentUser }) => {
                 <NavLink to='/create/projects' className="sidebar-button" activeClassName="sidebar-buttonClicked">My Projects</NavLink>    
                 <NavLink to='/create/create' className="sidebar-button" activeClassName="sidebar-buttonClicked">Create</NavLink>
                 <NavLink to='/create/settings' className="sidebar-button" activeClassName="sidebar-buttonClicked">Account Settings</NavLink>  
-            </div>
+            </div> */}
 
             {/* <div className="sidebar-signout">
               <button>Sign out</button> 
             </div> */}
-          </div>
+          {/* </div>
         </div>
-      </aside>
+      </aside> */}
 
-      <aside>
+      {/* <aside>
         <div className="position-stick">
           <div className="divider" />
         </div>
-      </aside>
+      </aside> */}
       
       
       <div className="main">
@@ -139,12 +139,12 @@ const Create = ({ currentUser }) => {
         </FormProvider>
       </div>
     </div>
-    :
-    <div className="center">
-    <h1>
-      Connect your wallet!
-    </h1>
-    </div>
+    // :
+    // <div className="center">
+    // <h1>
+    //   Connect your wallet!
+    // </h1>
+    // </div>
   
   );
 }
