@@ -28,15 +28,9 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
     []
   )
 
-  function checkSignedIn() {
-    if (!currentUser) {
-      login()
-    }
-    else {
-      let path = '/' 
-      history.push(path);
-      showOptionsFunc(true)
-    }
+  function homePage() {
+    let path = '/'
+    history.push(path);
   }
 
   function Menu() {
@@ -76,11 +70,11 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
   const setButton = () => {
     return (
       currentUser ?
-       <>
-        <button type='button' onClick={() => logout()}>Disconnect Wallet</button>
-       </>
-       :
-       <button type='button' style={{ background: "green" }} onClick={() => login()}>Connect Wallet</button>
+        <>
+          <button type='button' onClick={() => logout()}>Disconnect Wallet</button>
+        </>
+        :
+        <button type='button' style={{ background: "green" }} onClick={() => login()}>Connect Wallet</button>
     )
   }
 
@@ -88,7 +82,7 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
     <div className="very-near__navbar">
       <div className="very-near__navbar-links">
         <div className="very-near__navbar-links_logo">
-          <img src={logo} onClick={() => checkSignedIn()}/>
+          <img src={logo} onClick={() => homePage()} />
         </div>
         <div className="very-near__navbar-links_container">
           <Menu />
