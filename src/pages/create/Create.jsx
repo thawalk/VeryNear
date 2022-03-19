@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import './create.css';
 import { FormProvider, useForm, useFormContext } from 'react-hook-form'
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const userData = {
   username: "dabipotato",
@@ -24,7 +26,7 @@ const Create = ({ currentUser }) => {
   }
 
   const methods = useForm({ defaultValues })
-  const { register } = methods;
+  const { register, reset } = methods;
 
   useEffect(() => {
     if (selectedImage) {
@@ -39,6 +41,10 @@ const Create = ({ currentUser }) => {
 
       console.log("Image:", selectedImage)
       console.log("Token Metadata Zip:", tokenMetadataZip)
+      reset();
+      setSelectedImage(null)
+      setTokenMetadataZip(null)
+      toast.success("Uploaded, wait for verification!");
     })(e)
   }
 
@@ -138,6 +144,18 @@ const Create = ({ currentUser }) => {
           </div>
         </FormProvider>
       </div>
+      <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
     </div>
     // :
     // <div className="center">
