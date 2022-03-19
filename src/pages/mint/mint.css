@@ -18,7 +18,7 @@
   /* color: white; */
   /* row-gap: 48px; */
   /* prolly need to remove row gap */
-  /* margin-right: 2rem; */
+  margin-right: 2rem;
 }
 
 /* .title {
@@ -120,6 +120,39 @@
   border-radius: 5px;
 }
 
+.actionButtonWrapperDisconnect {
+  /* display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 50%; */
+  width: 100%;
+  margin: 0.01rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  /* background: red; */
+}
+
+.actionButtonWrapperDisconnect button {
+  flex: 0.3;
+  width: 100%;
+  min-height: 50px;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  /* background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%); */
+  background: #FF4820;
+  /* border-radius: 5px 0px 0px 5px; */
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  /* padding: 0 1rem; */
+  border: none;
+  /* border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; */
+  border-radius: 5px;
+}
+
 .mintButton {
   background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
   margin: 4px 0px;
@@ -165,11 +198,9 @@
 }
 
 .very-near__mint-image img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
 }
-
-
 
 @media screen and (max-width: 1050px) {
   .very-near__mint {
@@ -197,6 +228,11 @@
     line-height: 24px;
   }
 
+  .actionButtonWrapperDisconnect button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .poweredBy button {
     font-size: 16px;
     line-height: 24px;
@@ -216,6 +252,11 @@
   }
 
   .actionButtonWrapper button {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .actionButtonWrapperDisconnect button {
     font-size: 12px;
     line-height: 16px;
   }

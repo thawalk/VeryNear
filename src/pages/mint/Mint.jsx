@@ -90,7 +90,7 @@ const Mint = ({ currentUser, login, contract, wallet, logout }) => {
                         
                         {/* <a href='https://uphold.com/en-us/assets/crypto/buy-near' className='buyNearLink'>No NEAR? Buy here.</a> */}
                     </div>
-                    <div className="actionButtonWrapper">
+                    <div className="actionButtonWrapperDisconnect">
                     <button onClick={() => handleConnectWallet()}>Disconnect Wallet</button>
                     </div>
                     </>
