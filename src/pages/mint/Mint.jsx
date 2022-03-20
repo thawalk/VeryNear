@@ -23,7 +23,7 @@ const toastId = "preventDuplicateId"
 
 const mintData = { // TODO: UPDATE THIS
     name: "Monkey Business Collection",
-    description: "Where 500 randomly generated NFTs on the Solana blockchain generating $BANANA. Your NFT itself doubles as membership to Big Balla Chimps with exclusive access to a well-structured community, limited merchandise, web-casino, events, and other collections such as Big Balla Mutants. Our goal is to help anyone break their way into the NFT world successfully while having fun."
+    description: "Where 500 randomly generated NFTs on the NEAR blockchain generating $BANANA. Your NFT itself doubles as membership to Big Balla Chimps with exclusive access to a well-structured community, limited merchandise, web-casino, events, and other collections such as Big Balla Mutants. Our goal is to help anyone break their way into the NFT world successfully while having fun."
 }
 
 const Mint = ({ currentUser, login, contract, wallet, logout }) => {
