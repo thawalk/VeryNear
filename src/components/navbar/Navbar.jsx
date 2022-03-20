@@ -31,6 +31,7 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
   function homePage() {
     let path = '/'
     history.push(path);
+    showOptionsFunc(true)
   }
 
   function Menu() {
