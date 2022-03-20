@@ -33,10 +33,10 @@ import nft_9 from '../../../assets/header-assets/nft_9.png'
 
 export const SliderData = 
   [
+    nft_4,
     nft_1,
     nft_2,
     nft_3,
-    nft_4,
     nft_5,
     nft_6,
     nft_7,
