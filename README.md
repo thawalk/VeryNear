@@ -4,6 +4,8 @@
 
 You can view the demo of the application here: https://youtu.be/yu3YJWRgtPw
 
+You can view the slide deck regading this project here: https://docs.google.com/presentation/d/1-Z0LsOT9v0ru1i_zTkUEZIljYrsm730bRdfQk9pz92k/edit?usp=sharing
+
 Front-end of the application is built using React and the backend is NEAR Smart Contracts built using Rust.
 
 [Click here to view other screenshots of our application!](#Screenshots)
