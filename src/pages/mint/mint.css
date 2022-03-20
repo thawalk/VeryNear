@@ -1,10 +1,6 @@
 .very-near__mint {
   display: flex;
   padding-top: 106px;
-  /* justify-content: space-evenly; */
-  /* align-items: center;  */
-  /* background: linear-gradient(180deg, #319f99 1.84%, #8ddbd5 102.67%); */
-  /* height: 100vh; */
 }
 
 .content {
@@ -13,22 +9,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: red; */
-  /* font-family: var(--font-family); */
-  /* color: white; */
-  /* row-gap: 48px; */
-  /* prolly need to remove row gap */
   margin-right: 2rem;
 }
-
-/* .title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 8px;
-  max-width: 400px;
-  text-align: center;
-} */
 
 .content h1 {
   font-family: var(--font-family);
@@ -37,7 +19,6 @@
   line-height: 75px;
   letter-spacing: -0.04em;
   color: white;
-  /* background: red; */
 }
 
 .content p {
@@ -51,18 +32,7 @@
 }
 
 .poweredBy {
-  /* display: flex; */
-  /* background-color: #716c32; */
-  /* background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-family: var(--font-family);
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 27px; */
-
   width: 100%;
-  /* margin: 0rem 0 0rem; */
   display: flex;
   justify-content: center;
 }
@@ -72,32 +42,20 @@
   width: 100%;
   min-height: 30px;
   font-family: var(--font-family);
-  /* font-weight: bold; */
   font-size: 20px;
   line-height: 27px;
-  /* background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%); */
   background: #716c32;
-  /* border-radius: 5px 0px 0px 5px; */
   color: #ffffff;
-  /* cursor: pointer; */
   outline: none;
-  /* padding: 0 1rem; */
   border: none;
-  /* border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; */
   border-radius: 5px;
 }
 
 .actionButtonWrapper {
-  /* display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-  width: 50%; */
   width: 100%;
   margin: 2rem 0 1rem;
   display: flex;
   justify-content: center;
-  /* background: red; */
 }
 
 .actionButtonWrapper button {
@@ -109,27 +67,18 @@
   font-size: 20px;
   line-height: 27px;
   background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%);
-  /* border-radius: 5px 0px 0px 5px; */
   color: #ffffff;
   cursor: pointer;
   outline: none;
-  /* padding: 0 1rem; */
   border: none;
-  /* border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; */
   border-radius: 5px;
 }
 
 .actionButtonWrapperDisconnect {
-  /* display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-  width: 50%; */
   width: 100%;
   margin: 0.01rem 0 1rem;
   display: flex;
   justify-content: center;
-  /* background: red; */
 }
 
 .actionButtonWrapperDisconnect button {
@@ -140,16 +89,11 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 27px;
-  /* background: linear-gradient(89.97deg, #3dcd7c 1.84%, #01a1f9 102.67%); */
   background: #FF4820;
-  /* border-radius: 5px 0px 0px 5px; */
   color: #ffffff;
   cursor: pointer;
   outline: none;
-  /* padding: 0 1rem; */
   border: none;
-  /* border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; */
   border-radius: 5px;
 }
 

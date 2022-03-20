@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import './create.css';
 import { FormProvider, useForm, useFormContext } from 'react-hook-form'
-// import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -45,8 +44,6 @@ const Create = ({ currentUser }) => {
   }
 
   return (
-    // currentUser ?
-    
     <div className="very-near__create section__padding">
       {/* <aside>
         <div className="position-stick">
@@ -151,12 +148,6 @@ const Create = ({ currentUser }) => {
           theme="dark"
         />
     </div>
-    // :
-    // <div className="center">
-    // <h1>
-    //   Connect your wallet!
-    // </h1>
-    // </div>
   
   );
 }

@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './mint.css';
 import nft_1 from '../../assets/minting-now-assets/nft_1.png'
-import { useHistory } from "react-router-dom";
-import randomInteger from 'random-int';
-import { NEAR } from "near-units";
 import * as nearAPI from 'near-api-js';
-import { async } from 'regenerator-runtime';
 import { provider } from '../../utils';
 import getConfig from '../../config'
 import { ToastContainer, toast } from "react-toastify";
@@ -21,7 +17,7 @@ export const {
 
 const toastId = "preventDuplicateId"
 
-const mintData = { // TODO: UPDATE THIS
+const mintData = {
     name: "Monkey Business Collection",
     description: "Where 500 randomly generated NFTs on the NEAR blockchain generating $BANANA. Your NFT itself doubles as membership to Big Balla Chimps with exclusive access to a well-structured community, limited merchandise, web-casino, events, and other collections such as Big Balla Mutants. Our goal is to help anyone break their way into the NFT world successfully while having fun."
 }

@@ -1,8 +1,5 @@
 .slider {
-  /* z-index: 0; */
-  /* background-color: #fff; */
   position: relative;
-  /* height: 8vh; */
   display: flex;
   justify-content: center;
   align-items: center;

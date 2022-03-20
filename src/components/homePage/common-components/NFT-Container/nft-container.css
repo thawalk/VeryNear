@@ -20,7 +20,6 @@
 .very-near__nft-container-container {
   display: flex;
   flex-direction: row;
-  /* background: red; */
 }
 
 .very-near__nft-container-container_groupB {
@@ -32,10 +31,6 @@
 }
 
 @media screen and (max-width: 990px) {
-  /* .very-near__nft-container-container_groupB {
-    grid-template-columns: repeat(2, 1fr);
-  } */
-
   .very-near__nft-container-container {
       flex-direction: column-reverse;
   }

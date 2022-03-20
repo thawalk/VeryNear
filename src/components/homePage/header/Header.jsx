@@ -4,11 +4,6 @@ import ImageSlider from '../common-components/image-slider/ImageSlider';
 import { SliderData } from './SliderData';
 import { useHistory } from "react-router-dom";
 
-
-const HomePage = () => (
-  <div style={{ backgroundColor: "#6DABF8", height: "1000px" }}>HomePage </div>
-);
-
 function Header({ showOptionsFunc }) {
   const history = useHistory();
   function createPage() {
@@ -30,7 +25,6 @@ function Header({ showOptionsFunc }) {
       <div className='very-near__header-image'>
         <ImageSlider slides={SliderData} showOptionsFunc={showOptionsFunc}/>
       </div>
-      {/* <HomePage/> */}
     </div>
   )
 };

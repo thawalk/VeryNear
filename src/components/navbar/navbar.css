@@ -96,11 +96,6 @@
   display: none;
 }
 
-/* .active{
-  color: rgb(46, 251, 108); */
-  /* color: black; */
-/* } */
-
 @media screen and (max-width: 1050px) {
   .very-near__navbar-links_container {
     display: none;
@@ -131,8 +126,6 @@
   }
 
   .very-near__navbar-menu_container-links-sign {
-    /* height: 100px; */
-    /* background: #fff; */
     row-gap: 10px;
     justify-content: space-between;
     display: flex;

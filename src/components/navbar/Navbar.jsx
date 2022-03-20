@@ -3,11 +3,9 @@ import { useLocation } from 'react-router-dom'
 import { NavLink, useHistory } from 'react-router-dom';
 import { RiMenuFill, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
-// import { login, logout, testDeploy } from '../../utils'
 import logo from '../../assets/LOGO.svg'
 
-function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
-  // const [signedIn, setSignedIn] = props.signedIn
+function Navbar({ showOptions, showOptionsFunc }) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const history = useHistory();
 
@@ -54,31 +52,6 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
     )
   }
 
-
-  // function setButton() {
-  //   return (
-  //     signedIn ?
-  //       <>
-  //         {/* <div style={{ background: "#fff" }}> */}
-  //         {/* <button type='button' style={{ background: "green" }} onClick={testDeploy}>Dashboard</button> */}
-  //         <button type='button' onClick={logout}>Disconnect Wallet</button>
-  //       </>
-  //       :
-  //       <button type='button' style={{ background: "green" }} onClick={login}>Connect Wallet</button>
-  //   )
-  // }
-
-  const setButton = () => {
-    return (
-      currentUser ?
-        <>
-          <button type='button' onClick={() => logout()}>Disconnect Wallet</button>
-        </>
-        :
-        <button type='button' style={{ background: "green" }} onClick={() => login()}>Connect Wallet</button>
-    )
-  }
-
   return (
     <div className="very-near__navbar">
       <div className="very-near__navbar-links">
@@ -89,9 +62,6 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
           <Menu />
         </div>
       </div>
-      {/* <div className="very-near__navbar-sign">
-        {setButton()}
-      </div> */}
       <div className="very-near__navbar-menu">
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
@@ -101,9 +71,6 @@ function Navbar({ currentUser, showOptions, showOptionsFunc, login, logout }) {
           <div className="very-near__navbar-menu_container scale-up-center">
             <div className="very-near__navbar-menu_container-links">
               <Menu />
-              {/* <div className="very-near__navbar-menu_container-links-sign">
-                {setButton()}
-              </div> */}
             </div>
           </div>
         )
