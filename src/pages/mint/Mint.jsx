@@ -85,21 +85,15 @@ const Mint = ({ currentUser, login, contract, wallet, logout }) => {
     return (
         <div className='very-near__mint section__padding'>
             <div className='content'>
-                {/* <div className='title'> */}
                 <h1>{mintData.name}</h1>
-
                 <div className='poweredBy'>
                     <button>Powered by <span className="gradient__text" >VeryNear</span></button>
                 </div>
-                {/* </div> */}
-                {/* <p style={{ maxWidth: '400px' }}>{mintData.description}</p> */}
                 <p>{mintData.description}</p>
                 {currentUser ? (
                     <>
                     <div className="actionButtonWrapper">
                         <button onClick={() => handleMint()}>{ txHash ? 'Mint Again' : 'Mint'}</button>
-                        
-                        {/* <a href='https://uphold.com/en-us/assets/crypto/buy-near' className='buyNearLink'>No NEAR? Buy here.</a> */}
                     </div>
                     <div className="actionButtonWrapperDisconnect">
                     <button onClick={() => handleConnectWallet()}>Disconnect Wallet</button>
@@ -108,7 +102,6 @@ const Mint = ({ currentUser, login, contract, wallet, logout }) => {
                 ) : (
                     <div className="actionButtonWrapper">
                         <button onClick={() => handleConnectWallet()}>Connect Wallet</button>
-                        {/* <a href='https://uphold.com/en-us/assets/crypto/buy-near' className='buyNearLink'>No NEAR? Buy here.</a> */}
                     </div>
                 )}
                  <a href='https://uphold.com/en-us/assets/crypto/buy-near' className='buyNearLink' target="_blank">No NEAR? Buy here.</a>

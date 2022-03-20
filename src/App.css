@@ -6,7 +6,6 @@
 }
 
 body {
-  /* padding-top: 105px; */
   background: var(--color-bg);
 }
 
@@ -62,7 +61,6 @@ a {
   width: 100%;
   top: 0;
   z-index: 100;
-  /* background: #716c32; */
   background: black;
 }
 
