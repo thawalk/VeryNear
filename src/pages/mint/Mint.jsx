@@ -24,7 +24,7 @@ const mintData = {
 
 const Mint = ({ currentUser, login, contract, wallet, logout }) => {
     const [nftMedia, setNftMedia] = useState('')
-    const nearConfig = getConfig(process.env.NODE_ENV || 'development')
+    const nearConfig = getConfig('development')
     const handleConnectWallet = () => {
         if (!currentUser) {
             login()
