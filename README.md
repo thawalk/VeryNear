@@ -1,102 +1,66 @@
-Very-Near
-==================
+# VeryNear - A NFT Launchpad on the NEAR Protocol
 
-This [React] app was initialized with [create-near-app]
+![](https://i.imgur.com/Y9Cc6Xf.jpg)
 
+You can view the demo of the application here: https://youtu.be/yu3YJWRgtPw
 
-Quick Start
-===========
+Front-end of the application is built using React and the backend is NEAR Smart Contracts built using Rust.
 
-To run this project locally:
+[Click here to view other screenshots of our application!](#Screenshots)
 
-1. Prerequisites: Make sure you've installed [Node.js] ≥ 12
-2. Install dependencies: `npm install`
-3. Run the local development server: `npm run dev` (see `package.json` for a
-   full list of `scripts` you can run with `npm`)
+## Prerequisites
 
-Now you'll have a local development environment backed by the NEAR TestNet!
+* [NEAR Wallet Account](wallet.testnet.near.org)
+* [Rust Toolchain](https://docs.near.org/docs/develop/contracts/rust/intro#installing-the-rust-toolchain)
+* [NEAR-CLI](https://docs.near.org/docs/tools/near-cli#setup)
+* [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
-Go ahead and play with the app and the code. As you make code changes, the app will automatically reload.
+## Installation & Set Up for Contracts
 
+## Installation & Set Up for Front-end
 
-Exploring The Code
-==================
+Node Version Used: v14.17.3
+NPM Version Used: 8.3.2
 
-1. The "backend" code lives in the `/contract` folder. See the README there for
-   more info.
-2. The frontend code lives in the `/src` folder. `/src/index.html` is a great
-   place to start exploring. Note that it loads in `/src/index.js`, where you
-   can learn how the frontend connects to the NEAR blockchain.
-3. Tests: there are different kinds of tests for the frontend and the smart
-   contract. See `contract/README` for info about how it's tested. The frontend
-   code gets tested with [jest]. You can run both of these at once with `npm
-   run test`.
+### Download this repository
+```bash
+git clone https://github.com/thawalk/VeryNear.git
+cd VeryNear
+```
+### Running the Front-end
 
+The Front-end application (which is built with React.js) is located under the src folder in the directory.
 
-Deploy
-======
+1. Install dependencies
+```bash  
+npm install
+```
 
-Every smart contract in NEAR has its [own associated account][NEAR accounts]. When you run `npm run dev`, your smart contract gets deployed to the live NEAR TestNet with a throwaway account. When you're ready to make it permanent, here's how.
+2. Start application
+```bash  
+npm run dev
+```
 
-
-Step 0: Install near-cli (optional)
--------------------------------------
-
-[near-cli] is a command line interface (CLI) for interacting with the NEAR blockchain. It was installed to the local `node_modules` folder when you ran `npm install`, but for best ergonomics you may want to install it globally:
-
-    npm install --global near-cli
-
-Or, if you'd rather use the locally-installed version, you can prefix all `near` commands with `npx`
-
-Ensure that it's installed with `near --version` (or `npx near --version`)
+## Installation & Set Up for Scripts
 
 
-Step 1: Create an account for the contract
-------------------------------------------
+## Screenshots
 
-Each account on NEAR can have at most one contract deployed to it. If you've already created an account such as `your-name.testnet`, you can deploy your contract to `Very-Near.your-name.testnet`. Assuming you've already created an account on [NEAR Wallet], here's how to create `Very-Near.your-name.testnet`:
+### Homepage
 
-1. Authorize NEAR CLI, following the commands it gives you:
+![](https://i.imgur.com/9fnsx35.jpg)
 
-      near login
+### Create Page
 
-2. Create a subaccount (replace `YOUR-NAME` below with your actual account name):
+![](https://i.imgur.com/YxKKKOB.png)
 
-      near create-account Very-Near.YOUR-NAME.testnet --masterAccount YOUR-NAME.testnet
+### Minting Page
 
+![](https://i.imgur.com/Rq0gLDD.jpg)
 
-Step 2: set contract name in code
----------------------------------
+## Team Members
 
-Modify the line in `src/config.js` that sets the account name of the contract. Set it to the account id you used above.
+- [Tharun Adhi Narayan](https://github.com/thawalk)
+- [Lee Jia Le](https://github.com/cre8tion)
+- [David Fan](https://github.com/deadXdrake)
 
-    const CONTRACT_NAME = process.env.CONTRACT_NAME || 'Very-Near.YOUR-NAME.testnet'
-
-
-Step 3: deploy!
----------------
-
-One command:
-
-    npm run deploy
-
-As you can see in `package.json`, this does two things:
-
-1. builds & deploys smart contract to NEAR TestNet
-2. builds & deploys frontend code to GitHub using [gh-pages]. This will only work if the project already has a repository set up on GitHub. Feel free to modify the `deploy` script in `package.json` to deploy elsewhere.
-
-
-Troubleshooting
-===============
-
-On Windows, if you're seeing an error containing `EPERM` it may be related to spaces in your path. Please see [this issue](https://github.com/zkat/npx/issues/209) for more details.
-
-
-  [React]: https://reactjs.org/
-  [create-near-app]: https://github.com/near/create-near-app
-  [Node.js]: https://nodejs.org/en/download/package-manager/
-  [jest]: https://jestjs.io/
-  [NEAR accounts]: https://docs.near.org/docs/concepts/account
-  [NEAR Wallet]: https://wallet.testnet.near.org/
-  [near-cli]: https://github.com/near/near-cli
-  [gh-pages]: https://github.com/tschaub/gh-pages
