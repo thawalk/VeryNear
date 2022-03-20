@@ -1,0 +1,1 @@
+near call $1 new_default_meta '{"owner_id": "'$2'"}' --accountId $2

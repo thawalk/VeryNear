@@ -1,0 +1,38 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "BBB"
+    },
+    {
+      "trait_type": "Special",
+      "value": "None"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Copper"
+    },
+    {
+      "trait_type": "Eye",
+      "value": "Boring"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Brown Shirt"
+    },
+    {
+      "trait_type": "Face Accessory",
+      "value": "Pipe"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Brown Hat"
+    }
+  ],
+  "date": 1645194737749,
+  "description": "On NEAR",
+  "dna": "1234",
+  "edition": 74,
+  "image": "QmX8TwTUoCcMnK3QMLajUccd5c3izU9RYBZbRzxutPzdv5",
+  "title": "XXX 1"
+}

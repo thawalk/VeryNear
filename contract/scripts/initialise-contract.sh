@@ -1,0 +1,1 @@
+near call $1 new '{"owner_id": "'$2'", "metadata": '"$3"'}' --accountId $2

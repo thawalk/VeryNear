@@ -1,0 +1,38 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Special",
+      "value": "None"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Copper"
+    },
+    {
+      "trait_type": "Eye",
+      "value": "Angry"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Blue Shirt"
+    },
+    {
+      "trait_type": "Face Accessory",
+      "value": "Ring"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Blue Hat"
+    }
+  ],
+  "date": 1645194727749,
+  "description": "Herpy Derpy 2",
+  "dna": "",
+  "edition": 0,
+  "image": "QmV5oLKDNuMMEZEMyoq7nNpZ5NmBi8kk9H92vAYQBC2EQw",
+  "title": "Not Bored Ape #2"
+}

@@ -1,0 +1,38 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Black"
+    },
+    {
+      "trait_type": "Special",
+      "value": "None"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Dirt"
+    },
+    {
+      "trait_type": "Eye",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Blue Shirt"
+    },
+    {
+      "trait_type": "Face Accessory",
+      "value": "Nose Ring"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Blue Hat"
+    }
+  ],
+  "date": 1645194727749,
+  "description": "Herpy Derpy 3",
+  "dna": "",
+  "edition": 0,
+  "image": "QmdQNWBFeVD4XFxdWxHxwuLaxUFnNvh9BLDSwQayHRFbkH",
+  "title": "Not Bored Ape #3"
+}

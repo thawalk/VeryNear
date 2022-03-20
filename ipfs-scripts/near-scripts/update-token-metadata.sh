@@ -1,0 +1,1 @@
+near call $2 update_token_metadata --accountId $1 --amount 0.1 '{"token_id": "'$3'", "metadata": '"$4"' }' 

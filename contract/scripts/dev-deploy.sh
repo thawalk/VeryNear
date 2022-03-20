@@ -1,0 +1,1 @@
+near dev-deploy out/main.wasm

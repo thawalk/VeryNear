@@ -1,0 +1,1 @@
+node index.js uploadFiles -f $1 -c $2 -n $3

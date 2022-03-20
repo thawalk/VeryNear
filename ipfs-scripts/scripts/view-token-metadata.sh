@@ -1,0 +1,1 @@
+node index.js view-token-metadata -c $1 -a $2 -t $3

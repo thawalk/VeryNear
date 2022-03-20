@@ -1,0 +1,1 @@
+near deploy --accountId $1 --wasmFile out/main.wasm

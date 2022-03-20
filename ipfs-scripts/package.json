@@ -1,0 +1,11 @@
+{
+  "name": "sonear-ipfs-scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@fleekhq/fleek-storage-js": "^1.0.20",
+    "dotenv": "^16.0.0",
+    "yargs": "^17.3.1"
+  }
+}

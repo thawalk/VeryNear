@@ -1,0 +1,38 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Special",
+      "value": "None"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Copper"
+    },
+    {
+      "trait_type": "Eye",
+      "value": "Boring"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Brown Shirt"
+    },
+    {
+      "trait_type": "Face Accessory",
+      "value": "Pipe"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Brown Hat"
+    }
+  ],
+  "date": 1645194727749,
+  "description": "Herpy Derpy 0",
+  "dna": "",
+  "edition": 0,
+  "image": "QmR5JKEsuX4r8ERub4EeMDP8iL7BaKTZTLJkDrauPz89BJ",
+  "title": "Not Bored Ape #0"
+}

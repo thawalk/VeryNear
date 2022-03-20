@@ -1,0 +1,1 @@
+./scripts/update-token-metadata-single.sh ./data/tests 1 test7 dev-1646845554461-92891645798758 dev-1646845554461-92891645798758

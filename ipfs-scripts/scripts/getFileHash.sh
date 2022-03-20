@@ -1,0 +1,1 @@
+node index.js getFileHash -k $1
