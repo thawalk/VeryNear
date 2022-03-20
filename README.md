@@ -1,6 +1,6 @@
 # VeryNear - A NFT Launchpad on the NEAR Protocol
 
-![](https://i.imgur.com/Y9Cc6Xf.jpg)
+![Home Page Screenshot](https://i.imgur.com/Y9Cc6Xf.jpg)
 
 You can view the demo of the application here: <https://youtu.be/yu3YJWRgtPw>
 
@@ -75,15 +75,15 @@ npm run dev
 
 ### Homepage
 
-![](https://i.imgur.com/9fnsx35.jpg)
+![HomePage](https://i.imgur.com/9fnsx35.jpg)
 
 ### Create Page
 
-![](https://i.imgur.com/YxKKKOB.png)
+![CreatePage](https://i.imgur.com/YxKKKOB.png)
 
 ### Minting Page
 
-![](https://i.imgur.com/Rq0gLDD.jpg)
+![MintPage](https://i.imgur.com/Rq0gLDD.jpg)
 
 ## Team Members
 
