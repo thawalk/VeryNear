@@ -37,13 +37,10 @@ export async function initializeContract() {
     nearConfig.contractName,
     {
       viewMethods: ['nft_token_metadata'],
-      changeMethods: ['nft_mint'], // Jia le's change method "nft_mint"
+      changeMethods: ['nft_mint'],
       sender: walletConnection.getAccountId(),
     }
   )
-
-  // console.log("DETAILS:", walletConnection.account().getAccountDetails());
-
   return { contract, currentUser, nearConfig, walletConnection }
 }
 

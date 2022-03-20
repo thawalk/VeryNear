@@ -37,18 +37,12 @@ const Create = ({ currentUser }) => {
   const onSubmit = e => {
     e.preventDefault();
     methods.handleSubmit(data => {
-      console.log("DATA:", data)
-
-      console.log("Image:", selectedImage)
-      console.log("Token Metadata Zip:", tokenMetadataZip)
       reset();
       setSelectedImage(null)
       setTokenMetadataZip(null)
       toast.success("Uploaded, wait for verification!");
     })(e)
   }
-
-  // console.log('Selected')
 
   return (
     // currentUser ?
