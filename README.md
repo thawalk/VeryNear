@@ -69,8 +69,6 @@ npm install
 npm run dev
 ```
 
-## Installation & Set Up for Scripts
-
 ## Screenshots
 
 ### Homepage
