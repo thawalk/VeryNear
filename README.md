@@ -38,7 +38,7 @@ cd contract
 3. Initialize Default Contract
 
 ```bash
-./scripts/initalise-default-contract.sh nft.your-account.testnet your-account.testnet
+./scripts/initialise-default-contract.sh nft.your-account.testnet your-account.testnet
 ```
 
 ## Installation & Set Up for Front-end
