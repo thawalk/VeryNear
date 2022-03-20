@@ -7,7 +7,7 @@ import * as nearAPI from 'near-api-js'
 // Initialize contract & set global variables
 export async function initializeContract() {
   // Get network configuration values from config.js
-  const nearConfig = getConfig(process.env.NODE_ENV || 'development')
+  const nearConfig = getConfig('development')
 
   // Create keystore for signing transactions using the user's key
   const keyStore = new nearAPI.keyStores.BrowserLocalStorageKeyStore();
