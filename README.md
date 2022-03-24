@@ -20,7 +20,7 @@ Front-end of the application is built using React and the backend is NEAR Smart 
 ## Installation & Set Up for Contracts
 
 ```bash
-cd contract
+cd contracts
 ```
 
 ### Example
